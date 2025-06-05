@@ -1,0 +1,13 @@
+name: "hello"
+
+on:
+  branch:
+    - master
+    - production
+
+job:
+  hello-world:
+    run-on: ubuntu
+    steps:
+      name: "print hello"
+      run: echo "hello"
