@@ -10,4 +10,4 @@ job:
     run-on: ubuntu
     steps:
       name: "print hello"
-      run: echo "hello"
+      run: date
