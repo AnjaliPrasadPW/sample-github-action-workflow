@@ -1,0 +1,14 @@
+name: "multi event pipeline"
+
+on:
+  push:
+    branches:
+     - master
+     - production
+
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      -name: "print master"
+       run: echo " printing master"

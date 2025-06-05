@@ -1,13 +1,14 @@
 name: "hello"
 
 on:
-  branch:
-    - master
-    - production
+  push:
+    branches:
+      - master
+      - production
 
-job:
+jobs:
   hello-world:
-    run-on: ubuntu
+    runs-on: ubuntu
     steps:
-      name: "print hello"
-      run: date
+      -name: "print hello"
+       run: date
