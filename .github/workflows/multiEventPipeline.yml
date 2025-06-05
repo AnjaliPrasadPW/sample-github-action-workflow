@@ -3,12 +3,17 @@ name: "multi event pipeline"
 on:
   push:
     branches:
-     - master
-     - production
+      - master
+      - test
+  pull_request:
+    branches:
+      - master
+      - test
 
 jobs:
-  on-push:
+  show-message:
     runs-on: ubuntu-latest
+
     steps:
-      -name: "print master"
-       run: echo " printing master"
+      - name: "Print branch info"
+        run: echo "This job ran on a push or pull request to master or test branch"
